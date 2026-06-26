@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at PTA Engineering — Join Our Team | Akron, OH</title>
+  <meta name="description" content="Build your engineering career at PTA. Competitive wages, great benefits, progressive schedule, and a culture built on growth. Based in Akron, OH.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="images/pta-favicon.png">
+  <link rel="canonical" href="https://ptaengineering.com/careers.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaengineering.com/careers.html">
+  <meta property="og:title" content="Careers at PTA Engineering">
+  <meta property="og:description" content="Build your engineering career at PTA. Competitive wages, great benefits, progressive Mon–Fri schedule, and a culture built on growth. Akron, OH.">
+  <meta property="og:image" content="https://ptaengineering.com/images/hero-bg.jpg">
+  <meta property="og:site_name" content="PTA Engineering, Inc.">
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Careers at PTA Engineering">
+  <meta name="twitter:description" content="Build your engineering career at PTA. Competitive wages, great benefits, and a culture built on growth.">
+  <meta name="twitter:image" content="https://ptaengineering.com/images/hero-bg.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1A2E45; --navy-mid: #111F2E; --navy-light: #152A3E;
+      --amber: #E8A020; --white: #FFFFFF; --muted: rgba(255,255,255,0.7); --max-w: 1500px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--navy); color: var(--white); font-family: 'Barlow', sans-serif; font-size: 16px; line-height: 1.6; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 1000; background: var(--navy); border-bottom: 3px solid var(--amber); display: flex; align-items: center; }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 54px; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--amber); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-drawer { display: none; position: fixed; top: 80px; left: 0; width: 100%; background: var(--navy-mid); padding: 24px 32px 32px; z-index: 999; border-bottom: 3px solid var(--amber); flex-direction: column; gap: 20px; }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+    .nav-drawer a:hover, .nav-drawer a.active { color: var(--amber); }
+
+    /* PAGE HERO */
+    .page-hero { margin-top: 80px; padding: 80px 40px; background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 60%, #1e3a56 100%); border-bottom: 6px solid var(--amber); }
+    .page-hero-inner { max-width: var(--max-w); margin: 0 auto; }
+    .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(48px, 7vw, 88px); line-height: 1; color: var(--white); margin-bottom: 24px; }
+    .page-hero p { font-size: 18px; color: var(--muted); max-width: 700px; line-height: 1.7; }
+
+    .amber-bar { height: 6px; background: var(--amber); }
+    section { padding: 80px 40px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    /* RESUME BANNER */
+    .resume-banner { background: var(--amber); padding: 40px; }
+    .resume-banner-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .resume-banner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 36px); color: var(--navy); line-height: 1.1; }
+    .resume-banner p { font-size: 16px; color: var(--navy); margin-top: 6px; }
+    .btn-navy { display: inline-block; padding: 14px 36px; background: var(--navy); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .btn-navy:hover { background: var(--navy-mid); }
+
+    /* INTRO */
+    .intro-section { background: var(--navy-light); }
+    .intro-section p { font-size: 17px; color: var(--muted); line-height: 1.8; max-width: 820px; margin-bottom: 20px; }
+    .intro-section p:last-child { margin-bottom: 0; }
+
+    /* WHY PTA */
+    .why-section { background: var(--navy); }
+    .section-heading { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(32px, 4vw, 52px); color: var(--white); line-height: 1; margin-bottom: 48px; }
+    .section-heading span { color: var(--amber); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; }
+    .why-card { background: var(--navy-mid); padding: 40px 36px; border-top: 4px solid transparent; transition: border-color 0.2s; }
+    .why-card:hover { border-color: var(--amber); }
+    .why-card-icon { margin-bottom: 20px; }
+    .why-card-icon svg { width: 40px; height: 40px; fill: var(--amber); }
+    .why-card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 22px; letter-spacing: 0.04em; color: var(--white); margin-bottom: 14px; }
+    .why-card p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+    /* EEO */
+    .eeo-section { background: var(--navy-light); }
+    .eeo-inner { max-width: var(--max-w); margin: 0 auto; }
+    .eeo-box { border: 1px solid rgba(232,160,32,0.3); padding: 40px; }
+    .eeo-box h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 22px; color: var(--amber); margin-bottom: 16px; }
+    .eeo-box p { font-size: 15px; color: var(--muted); line-height: 1.75; }
+
+    /* FOOTER CTA */
+    .footer-cta { background: var(--amber); padding: 64px 40px; text-align: center; }
+    .footer-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(36px, 5vw, 60px); color: var(--navy); margin-bottom: 32px; line-height: 1; }
+
+    /* FOOTER */
+    footer { background: var(--navy-mid); padding: 48px 40px; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-left img { height: 44px; margin-bottom: 10px; display: block; }
+    .footer-left p { font-size: 13px; color: var(--muted); }
+    .footer-right { text-align: right; }
+    .footer-right a { display: block; font-size: 14px; color: var(--amber); font-weight: 500; margin-bottom: 4px; text-decoration: none; }
+    .footer-right a:hover { color: var(--white); }
+    .footer-right small { font-size: 12px; color: var(--muted); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) { .nav-links { gap: 24px; } }
+    @media (max-width: 768px) {
+      .nav-links { display: none; } .hamburger { display: flex; }
+      .page-hero { padding: 60px 24px; } section { padding: 60px 24px; }
+      .resume-banner { padding-left: 24px; padding-right: 24px; }
+      .resume-banner-inner { flex-direction: column; align-items: flex-start; }
+      .footer-cta { padding-left: 24px; padding-right: 24px; }
+      footer { padding: 40px 24px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-right { text-align: left; }
+      .eeo-box { padding: 28px 24px; }
+    }
+    @media (max-width: 420px) {
+      .page-hero h1 { font-size: 42px; }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="careers.html" class="active">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="careers.html" class="active">Careers</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Join the Team</p>
+    <h1>Careers at PTA</h1>
+    <p>Our success as a firm can be credited entirely to our people. If you value working on a team that strives for excellence and focuses on the growth of individuals — we want to hear from you.</p>
+  </div>
+</div>
+<div class="amber-bar"></div>
+
+<!-- RESUME BANNER -->
+<div class="resume-banner">
+  <div class="resume-banner-inner">
+    <div>
+      <h2>Ready to Apply?</h2>
+      <p>Send your resume directly to our HR team to start the conversation.</p>
+    </div>
+    <a class="btn-navy" href="mailto:hr-manager@ptaengineering.com">Send Your Resume</a>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="section-inner">
+    <p>With PTA, you'll find more than a workplace — you'll find an environment built for professional and personal growth. Our Akron office offers a comfortable, collaborative atmosphere with progressive schedule opportunities and exceptional benefits.</p>
+    <p>PTA is committed to hiring professional, dedicated, and dependable individuals. We invest in the development of our engineers to ensure our clients receive the service they expect and deserve.</p>
+  </div>
+</section>
+
+<!-- WHY PTA -->
+<section class="why-section">
+  <div class="section-inner">
+    <h2 class="section-heading">Why <span>PTA?</span></h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C11.163 4 4 11.163 4 20s7.163 16 16 16 16-7.163 16-16S28.837 4 20 4zm1 26.93V33h-2v-2.07C15.05 30.51 12.5 28.24 12.5 25.5h2.5c0 1.933 2.239 3.5 5 3.5s5-1.567 5-3.5c0-2.041-2.04-3.5-5-3.5-4.142 0-7.5-2.243-7.5-5.5 0-2.74 2.55-5.01 6.5-5.43V9h2v2.07c3.95.42 6.5 2.69 6.5 5.43h-2.5c0-1.933-2.239-3.5-5-3.5s-5 1.567-5 3.5c0 2.041 2.04 3.5 5 3.5 4.142 0 7.5 2.243 7.5 5.5 0 2.74-2.55 5.01-6.5 5.43z"/></svg></div>
+        <h3>Competitive Wages &amp; Excellent Benefits</h3>
+        <p>We value the well-being of our employees. PTA offers competitive wages, a variety of healthcare insurance options, life insurance, retirement benefits, and more.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L4 14l16 8 16-8-16-8zM4 22l16 8 16-8M4 30l16 8 16-8"/></svg></div>
+        <h3>Continuing Education</h3>
+        <p>Embodying our Core Value of Growth, education is a high priority. We offer ongoing training and mentorship through our Co-Operative Learning Program, Lunch &amp; Learns, and external training courses.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" stroke-width="2.5" fill="none" stroke="currentColor" style="stroke:#E8A020"/><path d="M20 12v8l5 5" stroke="#E8A020" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg></div>
+        <h3>Progressive Schedule</h3>
+        <p>Our office operates Monday–Thursday 7am–5pm and Friday 7am–12pm. Our flextime plan lets you adjust your schedule to fit your life — not the other way around.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 6c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zM10 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm20 0c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM20 22c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4zM10 24c-2.76 0-5 1.12-5 2.5V28h6v-1.5c0-.95.54-1.84 1.38-2.56C11.68 24.16 10.87 24 10 24zm20 0c-.87 0-1.68.16-2.38.44C28.46 25.16 29 26.05 29 27v1h6v-1.5C35 25.12 32.76 24 30 24z"/></svg></div>
+        <h3>Company Culture</h3>
+        <p>Our Core Values are at the root of all we do. We volunteer in the community, host company events, and yes — daily ping pong breaks are a real thing. You'll genuinely enjoy coming to work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EEO -->
+<section class="eeo-section">
+  <div class="eeo-inner">
+    <div class="eeo-box">
+      <h3>Equal Employment Opportunity</h3>
+      <p>PTA Engineering is an EEO/Affirmative Action employer committed to providing equal employment opportunities to all applicants and employees without regard to race, color, religion, sex (including pregnancy, sexual orientation, or gender identity), national origin, disability, age, or veteran status as it pertains to recruitment, hiring, training, placement, and promotion. Our office environment respects, supports, and values everyone.</p>
+      <p style="margin-top:14px;">Applicants with a disability who require a reasonable accommodation may contact us at <a href="tel:3306663702" style="color:var(--amber);">330-666-3702</a> or <a href="mailto:hr-manager@ptaengineering.com" style="color:var(--amber);">hr-manager@ptaengineering.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <h2>Let Us Work Together</h2>
+  <a class="btn-navy" href="contact.html">Contact Us</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering" />
+      <p>275 Springside Dr, Ste 300, Akron OH 44333</p>
+    </div>
+    <div class="footer-right">
+      <a href="tel:3306663702">330-666-3702</a>
+      <a href="mailto:info@ptaengineering.com">info@ptaengineering.com</a>
+      <small>© Copyright 2026 PTA Engineering, Inc.</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navDrawer').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    var drawer = document.getElementById('navDrawer');
+    var btn = document.getElementById('hamburger');
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+      drawer.classList.remove('open'); btn.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

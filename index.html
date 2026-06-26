@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTA Engineering, Inc. — Trusted MEP Advisors | Akron, OH</title>
+<meta name="description" content="PTA Engineering delivers mechanical, electrical, and plumbing engineering solutions across 40+ states. Trusted advisors since 1953. Based in Akron, OH.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="images/pta-favicon.png">
+  <link rel="canonical" href="https://ptaengineering.com/">
+
+<!-- Open Graph — controls how the link looks when shared on LinkedIn, Facebook, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ptaengineering.com/">
+<meta property="og:title" content="PTA Engineering, Inc. — Trusted MEP Advisors">
+<meta property="og:description" content="PTA Engineering delivers mechanical, electrical, and plumbing engineering solutions across 40+ states. Trusted advisors since 1953. Based in Akron, OH.">
+<meta property="og:image" content="https://ptaengineering.com/images/hero-bg.jpg">
+<meta property="og:site_name" content="PTA Engineering, Inc.">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PTA Engineering, Inc. — Trusted MEP Advisors">
+<meta name="twitter:description" content="PTA Engineering delivers mechanical, electrical, and plumbing engineering solutions across 40+ states. Trusted advisors since 1953.">
+<meta name="twitter:image" content="https://ptaengineering.com/images/hero-bg.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1A2E45;
+    --navy-mid: #111F2E;
+    --navy-light: #152A3E;
+    --amber: #E8A020;
+    --white: #ffffff;
+    --muted: rgba(255,255,255,0.7);
+    --max-w: 1500px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 1000;
+    background: var(--navy); border-bottom: 3px solid var(--amber);
+    display: flex; align-items: center;
+  }
+  .nav-inner {
+    max-width: var(--max-w); margin: 0 auto; width: 100%; padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo img { height: 54px; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+    font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--amber); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); transition: all 0.3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-drawer {
+    display: none; position: fixed; top: 80px; left: 0; width: 100%; background: var(--navy-mid);
+    padding: 24px 32px 32px; z-index: 999; border-bottom: 3px solid var(--amber);
+    flex-direction: column; gap: 20px;
+  }
+  .nav-drawer.open { display: flex; }
+  .nav-drawer a {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none;
+  }
+  .nav-drawer a:hover, .nav-drawer a.active { color: var(--amber); }
+
+  /* HERO */
+  .hero {
+    position: relative; height: 92vh; min-height: 560px;
+    display: flex; align-items: center; padding: 80px 64px 0;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/f28b968a-da89-46f9-bb48-a624e329ff28/Mountain+Top_093109_edited.jpg?content-type=image%2Fjpeg');
+    background-size: cover; background-position: center; filter: brightness(0.45);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between;
+    width: 100%; max-width: var(--max-w); margin: 0 auto; gap: 48px;
+  }
+  .hero-left { flex: 1; }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(80px, 11vw, 150px);
+    font-weight: 700; line-height: 0.88; text-transform: uppercase;
+    letter-spacing: -1px; color: var(--white); margin-bottom: 40px;
+  }
+  .hero h1 span { display: block; }
+  .hero-btn {
+    display: inline-block; font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--navy); background: var(--amber); padding: 14px 32px;
+    text-decoration: none; border-radius: 2px; transition: background 0.2s;
+  }
+  .hero-btn:hover { background: var(--white); }
+
+  /* HERO STATS */
+  .hero-right {
+    flex-shrink: 0; display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3px; width: 42%;
+  }
+  .hero-stat { background: rgba(17,31,46,0.8); padding: 48px; min-width: 180px; }
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 76px;
+    font-weight: 700; color: var(--white); line-height: 1;
+  }
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
+    font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--amber); margin-top: 8px;
+  }
+
+  /* AMBER BAR */
+  .amber-bar { background: var(--amber); height: 6px; width: 100%; }
+
+  /* SPLIT INTRO */
+  .split-intro { overflow: hidden; }
+  .split-inner {
+    max-width: var(--max-w); margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 520px; width: 100%;
+  }
+  .split-left {
+    background: var(--navy-mid); padding: 80px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .split-right {
+    background-image: url('https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/adbcf551-a6e8-49ed-b3da-10e342a73e43/Leahy_114330_edited.jpg');
+    background-size: cover; background-position: center;
+  }
+  .section-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 11px;
+    font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--amber); margin-bottom: 16px;
+  }
+  .split-left h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: clamp(40px, 5vw, 72px); text-transform: uppercase;
+    line-height: 1; color: var(--white); margin-bottom: 24px;
+  }
+  .split-left p {
+    font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; max-width: 480px;
+  }
+
+  /* SECTIONS */
+  .section { padding: 80px 40px; }
+  .section-inner { max-width: var(--max-w); margin: 0 auto; }
+  .section-header { margin-bottom: 48px; }
+  .section-header h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: clamp(36px, 4vw, 56px); text-transform: uppercase;
+    line-height: 1; color: var(--white);
+  }
+
+  /* DISCIPLINES GRID */
+  .grid-disciplines {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px;
+  }
+  .discipline-card {
+    background: var(--navy-mid); padding: 32px 24px;
+    border-top: 3px solid transparent; transition: border-color 0.2s;
+  }
+  .discipline-card:hover { border-color: var(--amber); }
+  .disc-icon {
+    width: 40px; height: 40px; margin-bottom: 16px;
+  }
+  .disc-icon svg {
+    width: 40px; height: 40px; fill: none;
+    stroke: var(--amber); stroke-width: 1.5;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  .discipline-card h3 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+    font-size: 16px; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--white); line-height: 1.3;
+  }
+
+  /* SECTORS GRID */
+  .grid-sectors {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+  }
+  .sector-card {
+    background: var(--navy-mid); padding: 32px 28px;
+    display: flex; flex-direction: column; gap: 14px;
+    border-top: 3px solid transparent; transition: border-color 0.2s;
+  }
+  .sector-card:hover { border-color: var(--amber); }
+  .sector-card svg {
+    width: 28px; height: 28px; fill: none;
+    stroke: var(--amber); stroke-width: 1.5;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  .sector-card span {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 16px;
+    font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--white);
+  }
+
+  /* PHOTO ROW */
+  .photo-row { display: grid; grid-template-columns: repeat(3, 1fr); height: 320px; }
+  .photo-placeholder {
+    background: var(--navy-mid);
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 12px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
+    font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(232,160,32,0.5);
+  }
+
+  /* FOOTER CTA */
+  .footer-cta { background: var(--amber); padding: 80px 40px; }
+  .footer-cta-inner {
+    max-width: var(--max-w); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  }
+  .footer-cta h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: clamp(40px, 5vw, 72px); text-transform: uppercase;
+    line-height: 1; color: var(--navy);
+  }
+  .cta-btn {
+    display: inline-block; padding: 16px 48px;
+    background: var(--navy); color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; transition: background 0.2s; white-space: nowrap;
+  }
+  .cta-btn:hover { background: var(--navy-mid); }
+
+  /* FOOTER */
+  footer { background: var(--navy-mid); padding: 48px 40px; }
+  .footer-inner {
+    max-width: var(--max-w); margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 24px;
+  }
+  .footer-left img { height: 44px; margin-bottom: 10px; display: block; }
+  .footer-left p { font-size: 13px; color: var(--muted); }
+  .footer-right { text-align: right; }
+  .footer-right a { display: block; font-size: 14px; color: var(--amber); font-weight: 500; margin-bottom: 4px; text-decoration: none; }
+  .footer-right a:hover { color: var(--white); }
+  .footer-right small { font-size: 12px; color: var(--muted); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .grid-disciplines { grid-template-columns: repeat(3, 1fr); }
+    .grid-sectors { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 80px 24px 0; }
+    .hero-content { flex-direction: column; align-items: flex-start; }
+    .hero-right { width: 100%; }
+    .split-inner { grid-template-columns: 1fr; grid-template-rows: 260px auto; }
+    .split-right { grid-row: 1; }
+    .split-left { grid-row: 2; padding: 48px 24px; }
+    .section { padding: 48px 24px; }
+    .grid-disciplines { grid-template-columns: repeat(2, 1fr); }
+    .grid-sectors { grid-template-columns: repeat(2, 1fr); }
+    .photo-row { grid-template-columns: 1fr; height: auto; }
+    .photo-placeholder { height: 200px; }
+    .footer-cta { padding: 48px 24px; }
+    .footer-cta-inner { flex-direction: column; align-items: flex-start; }
+    footer { padding: 40px 24px; }
+    .footer-right { text-align: left; }
+  }
+  @media (max-width: 420px) {
+    .grid-disciplines { grid-template-columns: 1fr; }
+    .grid-sectors { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering, Inc." />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" class="active">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1><span>Trusted</span><span>Advisors</span></h1>
+      <a href="about.html" class="hero-btn">Learn More</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat">
+        <div class="stat-num">73</div>
+        <div class="stat-label">Years</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Engineers</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Disciplines</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Sectors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMBER BAR -->
+<div class="amber-bar"></div>
+
+<!-- SPLIT INTRO -->
+<section class="split-intro">
+  <div class="split-inner">
+    <div class="split-left">
+      <div class="section-eyebrow">Who We Are</div>
+      <h2>One Trusted<br>Team</h2>
+      <p>For over 73 years, PTA Engineering has delivered mechanical, electrical, and plumbing solutions that are biddable, buildable, and built to last. We don't just design systems — we become part of your team.</p>
+      <a href="about.html" class="hero-btn" style="align-self:flex-start;">Learn More</a>
+    </div>
+    <div class="split-right"></div>
+  </div>
+</section>
+
+<!-- DISCIPLINES -->
+<section class="section" style="background: var(--navy);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">What We Do</div>
+      <h2>Engineering Disciplines</h2>
+    </div>
+    <div class="grid-disciplines">
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M8 20h24M20 8v24M14 14l12 12M26 14L14 26"/><circle cx="20" cy="20" r="4"/></svg></div>
+        <h3>HVAC Systems</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M22 6l-6 14h8l-6 14"/></svg></div>
+        <h3>Electrical Power Distribution</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M12 8v10a8 8 0 0 0 16 0V8M10 8h6M24 8h6"/></svg></div>
+        <h3>Plumbing Systems</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M20 34c-6 0-10-4-10-9 0-4 3-7 5-10 1 3 2 5 5 6 0-4 2-8 5-11 2 4 5 8 5 15 0 5-4 9-10 9z"/></svg></div>
+        <h3>Fire Systems</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M20 8v2M20 30v2M8 20H6M34 20h-2M12 12l-1.4-1.4M29.4 29.4L28 28M12 28l-1.4 1.4M29.4 10.6L28 12"/><circle cx="20" cy="20" r="7"/><path d="M17 30h6"/></svg></div>
+        <h3>Lighting Systems</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><rect x="8" y="14" width="24" height="16" rx="2"/><path d="M14 14v-2a6 6 0 0 1 12 0v2"/><circle cx="20" cy="22" r="2"/></svg></div>
+        <h3>Communications &amp; Security</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M10 30L20 10l10 20M14 24h12"/></svg></div>
+        <h3>Engineering Surveys &amp; Studies</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M20 8a10 10 0 0 1 10 10v8H10v-8A10 10 0 0 1 20 8z"/><path d="M17 26v1a3 3 0 0 0 6 0v-1"/><path d="M20 8V6"/></svg></div>
+        <h3>Alarm Systems</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M14 20l5 5 9-9"/><circle cx="20" cy="20" r="12"/></svg></div>
+        <h3>Commissioning</h3>
+      </div>
+      <div class="discipline-card">
+        <div class="disc-icon"><svg viewBox="0 0 40 40"><path d="M20 8l-4 10h6l-8 14 10-12h-6z"/></svg></div>
+        <h3>Arc Flash &amp; Coordination Studies</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="section" style="background: var(--navy-light);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Where We Work</div>
+      <h2>Project Sectors</h2>
+    </div>
+    <div class="grid-sectors">
+      <div class="sector-card"><svg viewBox="0 0 28 28"><path d="M4 24V10l10-6 10 6v14"/><rect x="10" y="16" width="8" height="8"/></svg><span>Healthcare</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="16" rx="1"/><path d="M10 8V6a4 4 0 0 1 8 0v2"/><path d="M14 14v4"/><circle cx="14" cy="13" r="1"/></svg><span>Mission Critical</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><path d="M4 24V10l10-6 10 6v14"/><path d="M10 14h8M10 18h8"/></svg><span>Education</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><rect x="4" y="10" width="20" height="14" rx="1"/><path d="M8 10V8a6 6 0 0 1 12 0v2"/></svg><span>Commercial</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><rect x="4" y="8" width="20" height="16"/><path d="M4 14h20M12 8v16"/></svg><span>Industrial</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><path d="M14 4l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg><span>Municipal</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><path d="M6 24V12l8-8 8 8v12"/><path d="M4 24h20"/><rect x="11" y="17" width="6" height="7"/></svg><span>Research &amp; Laboratories</span></div>
+      <div class="sector-card"><svg viewBox="0 0 28 28"><path d="M4 20c5-8 15-8 20 0"/><circle cx="14" cy="10" r="4"/></svg><span>Parks &amp; Recreation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO ROW -->
+<div class="photo-row">
+  <div class="photo-placeholder">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="rgba(232,160,32,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="2"/><circle cx="16" cy="16" r="5"/><path d="M3 11l5-5h4"/></svg>
+    Project Photo
+  </div>
+  <div class="photo-placeholder">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="rgba(232,160,32,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="2"/><circle cx="16" cy="16" r="5"/><path d="M3 11l5-5h4"/></svg>
+    Project Photo
+  </div>
+  <div class="photo-placeholder">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="rgba(232,160,32,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="2"/><circle cx="16" cy="16" r="5"/><path d="M3 11l5-5h4"/></svg>
+    Project Photo
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="footer-cta-inner">
+    <h2>Let Us Work<br>Together</h2>
+    <a href="contact.html" class="cta-btn">Contact Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering, Inc." />
+      <p>275 Springside Drive, Suite 300<br>Akron, OH 44333</p>
+    </div>
+    <div class="footer-right">
+      <a href="tel:3306663702">330-666-3702</a>
+      <a href="mailto:info@ptaengineering.com">info@ptaengineering.com</a>
+      <small>© Copyright 2026 PTA Engineering, Inc.</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navDrawer').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    var drawer = document.getElementById('navDrawer');
+    var btn = document.getElementById('hamburger');
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+      drawer.classList.remove('open');
+      btn.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

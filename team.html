@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The PTA Engineering Team — Engineers & Staff | Akron, OH</title>
+<meta name="description" content="Meet the PTA Engineering team — experienced mechanical and electrical engineers, designers, and technical professionals delivering MEP solutions nationwide.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="images/pta-favicon.png">
+  <link rel="canonical" href="https://ptaengineering.com/team.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ptaengineering.com/team.html">
+<meta property="og:title" content="The PTA Engineering Team">
+<meta property="og:description" content="Meet the experienced engineers and technical professionals behind PTA Engineering — delivering precise, buildable MEP systems across the country.">
+<meta property="og:image" content="https://ptaengineering.com/images/hero-bg.jpg">
+<meta property="og:site_name" content="PTA Engineering, Inc.">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The PTA Engineering Team">
+<meta name="twitter:description" content="Meet the experienced engineers and technical professionals behind PTA Engineering.">
+<meta name="twitter:image" content="https://ptaengineering.com/images/hero-bg.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1A2E45; --navy-mid: #111F2E; --navy-light: #152A3E;
+    --amber: #E8A020; --white: #ffffff; --muted: rgba(255,255,255,0.7); --max-w: 1500px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; width: 100%; height: 80px; z-index: 1000; background: var(--navy); border-bottom: 3px solid var(--amber); display: flex; align-items: center; }
+  .nav-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo img { height: 54px; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--amber); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); transition: all 0.3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-drawer { display: none; position: fixed; top: 80px; left: 0; width: 100%; background: var(--navy-mid); padding: 24px 32px 32px; z-index: 999; border-bottom: 3px solid var(--amber); flex-direction: column; gap: 20px; }
+  .nav-drawer.open { display: flex; }
+  .nav-drawer a { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+  .nav-drawer a:hover, .nav-drawer a.active { color: var(--amber); }
+
+  /* PAGE HERO */
+  .page-hero { margin-top: 80px; padding: 80px 40px; background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 60%, #1e3a56 100%); border-bottom: 6px solid var(--amber); }
+  .page-hero-inner { max-width: var(--max-w); margin: 0 auto; }
+  .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
+  .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(48px, 7vw, 88px); line-height: 1; color: var(--white); margin-bottom: 24px; }
+  .page-hero p { font-size: 18px; color: var(--muted); max-width: 700px; line-height: 1.7; }
+
+  /* TEAM SECTIONS */
+  .team-section { padding: 72px 40px; max-width: var(--max-w); margin: 0 auto; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px, 4vw, 52px); font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: -0.5px; line-height: 1; border-bottom: 1px solid rgba(232,160,32,0.3); padding-bottom: 16px; margin-bottom: 40px; }
+
+  /* PRINCIPALS GRID — 5 col */
+  .principals-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+  .principal-card { display: flex; flex-direction: column; }
+  .principal-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top center; display: block; border-bottom: 3px solid var(--amber); }
+  .principal-info { padding: 16px 14px 20px; display: flex; flex-direction: column; gap: 5px; background: var(--navy-mid); flex: 1; }
+  .principal-name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: 0.02em; }
+  .principal-role { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); }
+  .principal-spec { font-size: 13px; color: var(--muted); }
+
+  .section-divider { height: 1px; background: rgba(232,160,32,0.15); margin: 0 40px; }
+
+  /* OUR TEAM GRID — 6 col */
+  .team-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
+  .team-card { display: flex; flex-direction: column; }
+  .team-photo { width: 100%; aspect-ratio: 1/1; object-fit: cover; object-position: top center; display: block; }
+  .team-info { padding: 12px 12px 16px; background: var(--navy-mid); flex: 1; }
+  .team-name { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: 0.02em; margin-bottom: 3px; }
+  .team-title { font-size: 12px; color: var(--muted); }
+
+  /* FOOTER CTA */
+  .footer-cta { background: var(--amber); padding: 64px 40px; }
+  .footer-cta-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  .footer-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(36px, 5vw, 60px); color: var(--navy); line-height: 1; }
+  .cta-btn { display: inline-block; padding: 16px 48px; background: var(--navy); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+  .cta-btn:hover { background: var(--navy-mid); }
+
+  /* FOOTER */
+  footer { background: var(--navy-mid); padding: 48px 40px; }
+  .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+  .footer-left img { height: 44px; margin-bottom: 10px; display: block; }
+  .footer-left p { font-size: 13px; color: var(--muted); }
+  .footer-right { text-align: right; }
+  .footer-right a { display: block; font-size: 14px; color: var(--amber); font-weight: 500; margin-bottom: 4px; text-decoration: none; }
+  .footer-right a:hover { color: var(--white); }
+  .footer-right small { font-size: 12px; color: var(--muted); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1200px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 900px) { .principals-grid { grid-template-columns: repeat(3, 1fr); } .team-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) {
+    .nav-links { display: none; } .hamburger { display: flex; }
+    .page-hero { padding: 60px 24px; }
+    .team-section { padding: 48px 24px; }
+    .section-divider { margin: 0 24px; }
+    .principals-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-cta { padding: 48px 24px; }
+    .footer-cta-inner { flex-direction: column; align-items: flex-start; }
+    footer { padding: 40px 24px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-right { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering, Inc." />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html" class="active">Team</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="eyebrow">Our People</p>
+    <h1>The PTA<br>Team</h1>
+    <p>Our team consists of engineers, designers, and technical professionals delivering precise, buildable MEP systems across the country.</p>
+  </div>
+</div>
+
+<!-- ENGINEERING LEADERS -->
+<div class="team-section">
+  <div class="section-label">Engineering Leaders</div>
+  <div class="principals-grid">
+
+    <div class="principal-card">
+      <img class="principal-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/e5fc83ac-d0ec-49d4-af43-9f331ab2fc33/%24JC+2023.jpg?content-type=image%2Fjpeg" alt="Jeff Cerveny"/>
+      <div class="principal-info">
+        <div class="principal-name">Jeff Cerveny, PE</div>
+        <div class="principal-role">Principal</div>
+        <div class="principal-spec">Mechanical Engineer</div>
+      </div>
+    </div>
+
+    <div class="principal-card">
+      <img class="principal-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/93e865c0-9b75-4307-84e7-47181b8dd208/%24JJ+2023.jpg?content-type=image%2Fjpeg" alt="Jon Jennings"/>
+      <div class="principal-info">
+        <div class="principal-name">Jon Jennings, PE</div>
+        <div class="principal-role">Principal</div>
+        <div class="principal-spec">Electrical Engineer</div>
+      </div>
+    </div>
+
+    <div class="principal-card">
+      <img class="principal-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/ae902578-3e9d-47f9-bd83-617c14f0a10b/%24PK+2023.jpg?content-type=image%2Fjpeg" alt="Pat Klanac"/>
+      <div class="principal-info">
+        <div class="principal-name">Pat Klanac, PE</div>
+        <div class="principal-role">Principal</div>
+        <div class="principal-spec">Mechanical Engineer</div>
+      </div>
+    </div>
+
+    <div class="principal-card">
+      <img class="principal-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/77a6d31f-a9cb-4299-aa79-e4efa246cb1f/%24BM+2023.jpg?content-type=image%2Fjpeg" alt="Brian Makan"/>
+      <div class="principal-info">
+        <div class="principal-name">Brian Makan, PE</div>
+        <div class="principal-role">Principal</div>
+        <div class="principal-spec">Electrical Engineer</div>
+      </div>
+    </div>
+
+    <div class="principal-card">
+      <img class="principal-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/db517499-6e36-4802-b14d-b5351415320c/%24MS+2023.jpg?content-type=image%2Fjpeg" alt="Matt Sejba"/>
+      <div class="principal-info">
+        <div class="principal-name">Matt Sejba, PE</div>
+        <div class="principal-role">Principal</div>
+        <div class="principal-spec">Mechanical Engineer</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- OUR TEAM -->
+<div class="team-section">
+  <div class="section-label">Our Team</div>
+  <div class="team-grid">
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/4d4f3253-dee1-4dd6-86ab-d570a4fdb2ae/%24DSC_6556+JB-use+this+one.JPG?content-type=image%2Fjpeg" alt="John Black"/>
+      <div class="team-info"><div class="team-name">John Black</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/2b29e15e-0c1c-4551-8757-c5afdf84a3bb/DSC_5592+-use+this+one.jpg?content-type=image%2Fjpeg" alt="Brian Call"/>
+      <div class="team-info"><div class="team-name">Brian Call, PE</div><div class="team-title">Electrical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/01cf1773-5eeb-4def-9107-5c01e2a8d0c8/Campbell.jpg?content-type=image%2Fjpeg" alt="Chris Campbell"/>
+      <div class="team-info"><div class="team-name">Chris Campbell, PE</div><div class="team-title">Sr. Associate, Electrical</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/69938e41-bf43-4608-8c09-4afe63e1cde4/Farley+Photo.jpg?content-type=image%2Fjpeg" alt="Joe Farley"/>
+      <div class="team-info"><div class="team-name">Joe Farley, PE</div><div class="team-title">Sr. Associate, Mechanical</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/90c1bc8f-0204-448a-864e-d2ebf75d39d5/DSC_5686+use+this+one.JPG?content-type=image%2Fjpeg" alt="David Hernandez"/>
+      <div class="team-info"><div class="team-name">David Hernandez, PE</div><div class="team-title">Sr. Associate, Electrical</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/5b00bee0-3eb3-46c3-90f5-e380fbdc92ed/0V4A6647-EDIT.jpg?content-type=image%2Fjpeg" alt="Ryan Hewit"/>
+      <div class="team-info"><div class="team-name">Ryan Hewit, PE</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/99e0f3da-fd2d-45e7-b5ca-9f22d4af2cc4/-0O0A5832.jpg?content-type=image%2Fjpeg" alt="Nasser Ibrahim"/>
+      <div class="team-info"><div class="team-name">Nasser Ibrahim</div><div class="team-title">Electrical Designer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/bdb14915-193f-4c1e-83ae-63b715bb7a2f/DSC_5571+-use+this+one.jpg?content-type=image%2Fjpeg" alt="Mike Musci"/>
+      <div class="team-info"><div class="team-name">Mike Musci, PE</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/515fdda9-88a1-401b-a9e1-763d3cff8797/DSC_5614+-use+this+one.jpg?content-type=image%2Fjpeg" alt="Nathan Murach"/>
+      <div class="team-info"><div class="team-name">Nathan Murach, EI</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/2c68fcc3-1f54-496a-9075-ce684699c0ea/0O0A5822.jpg?content-type=image%2Fjpeg" alt="Brian Rath"/>
+      <div class="team-info"><div class="team-name">Brian Rath, EI</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/5b692688-7a95-41f3-8a78-d49b33b58a48/0V4A6660-EDIT.jpg?content-type=image%2Fjpeg" alt="Kyle Smith"/>
+      <div class="team-info"><div class="team-name">Kyle Smith, EI</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/625d621f-421e-42ee-b101-916188fa7642/DSC_6179.JPG?content-type=image%2Fjpeg" alt="Mark Soehnlen"/>
+      <div class="team-info"><div class="team-name">Mark Soehnlen, EI</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/0707aa28-6e7b-4f05-901e-4a0a6b627a45/DSC_5546+-use+this+one.jpg?content-type=image%2Fjpeg" alt="Adam Spray"/>
+      <div class="team-info"><div class="team-name">Adam Spray, PE</div><div class="team-title">Associate, Electrical</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/551397e7-b2f5-4b2d-813a-d356b74904a3/%24DSC_6559+ST-use+this+one.JPG?content-type=image%2Fjpeg" alt="Slavisa Tosanovic"/>
+      <div class="team-info"><div class="team-name">Slavisa Tosanovic, EI</div><div class="team-title">Electrical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/226c7f80-14f6-423e-aec5-3910cb3cec74/%24KVargas.jpg?content-type=image%2Fjpeg" alt="Ken Vargas"/>
+      <div class="team-info"><div class="team-name">Ken Vargas</div><div class="team-title">Mechanical Designer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/f6793116-0439-49c4-ae4f-6320cdbb65a8/%240O0A5124.jpeg?content-type=image%2Fjpeg" alt="Kristi Weir"/>
+      <div class="team-info"><div class="team-name">Kristi Weir, EI</div><div class="team-title">Mechanical Engineer</div></div>
+    </div>
+
+    <div class="team-card">
+      <img class="team-photo" src="https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/93bf12b8-2aad-4287-9378-31418f2ab04c/DSC_5727.JPG?content-type=image%2Fjpeg" alt="Bobby Wick"/>
+      <div class="team-info"><div class="team-name">Bobby Wick</div><div class="team-title">Sr. Electrical Designer</div></div>
+    </div>
+
+    <!-- Craig Briggs — photo to be added -->
+    <div class="team-card">
+      <div class="team-photo" style="background:var(--navy-mid);display:flex;align-items:center;justify-content:center;">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="rgba(232,160,32,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="18" r="8"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16"/></svg>
+      </div>
+      <div class="team-info"><div class="team-name">Craig Briggs</div><div class="team-title">— Photo Coming Soon —</div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="footer-cta-inner">
+    <h2>Let Us Work<br>Together</h2>
+    <a href="contact.html" class="cta-btn">Contact Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering, Inc." />
+      <p>275 Springside Drive, Suite 300<br>Akron, OH 44333</p>
+    </div>
+    <div class="footer-right">
+      <a href="tel:3306663702">330-666-3702</a>
+      <a href="mailto:info@ptaengineering.com">info@ptaengineering.com</a>
+      <small>© Copyright 2026 PTA Engineering, Inc.</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navDrawer').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    var drawer = document.getElementById('navDrawer');
+    var btn = document.getElementById('hamburger');
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+      drawer.classList.remove('open'); btn.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

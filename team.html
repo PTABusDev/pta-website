@@ -64,8 +64,7 @@
   /* PRINCIPALS GRID — 5 col */
   .principals-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
   .principal-card { display: flex; flex-direction: column; }
-  .principal-photo-wrap { width: 100%; aspect-ratio: 4/5; overflow: hidden; border-bottom: 3px solid var(--amber); position: relative; }
-  .principal-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .principal-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; display: block; border-bottom: 3px solid var(--amber); }
   .principal-info { padding: 16px 14px 20px; display: flex; flex-direction: column; gap: 5px; background: var(--navy-mid); flex: 1; }
   .principal-name { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: 0.02em; }
   .principal-role { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); }
@@ -76,8 +75,7 @@
   /* OUR TEAM GRID — 6 col */
   .team-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
   .team-card { display: flex; flex-direction: column; }
-  .team-photo-wrap { width: 100%; aspect-ratio: 6/5; overflow: hidden; position: relative; }
-  .team-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .team-photo { width: 100%; aspect-ratio: 1/1; object-fit: cover; object-position: center top; display: block; }
   .team-info { padding: 12px 12px 16px; background: var(--navy-mid); flex: 1; }
   .team-name { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: 0.02em; margin-bottom: 3px; }
   .team-title { font-size: 12px; color: var(--muted); }
@@ -160,7 +158,7 @@
   <div class="principals-grid">
 
     <div class="principal-card">
-      <div class="principal-photo-wrap"><img class="principal-photo" src="images/cerveny-jeff.jpg" alt="Jeff Cerveny" style="transform: scale(0.85); object-position: center 10%;"/></div>
+      <img class="principal-photo" src="images/cerveny-jeff.jpg" alt="Jeff Cerveny"/>
       <div class="principal-info">
         <div class="principal-name">Jeff Cerveny, PE</div>
         <div class="principal-role">Principal</div>
@@ -169,7 +167,7 @@
     </div>
 
     <div class="principal-card">
-      <div class="principal-photo-wrap"><img class="principal-photo" src="images/jennings-jon.jpg" alt="Jon Jennings" style="transform: scale(0.78); object-position: center 8%;"/></div>
+      <img class="principal-photo" src="images/jennings-jon.jpg" alt="Jon Jennings"/>
       <div class="principal-info">
         <div class="principal-name">Jon Jennings, PE</div>
         <div class="principal-role">Principal</div>
@@ -178,7 +176,7 @@
     </div>
 
     <div class="principal-card">
-      <div class="principal-photo-wrap"><img class="principal-photo" src="images/klanac-pat.jpg" alt="Pat Klanac" style="transform: scale(1.25); object-position: center 5%;"/></div>
+      <img class="principal-photo" src="images/klanac-pat.jpg" alt="Pat Klanac"/>
       <div class="principal-info">
         <div class="principal-name">Pat Klanac, PE</div>
         <div class="principal-role">Principal</div>
@@ -187,7 +185,7 @@
     </div>
 
     <div class="principal-card">
-      <div class="principal-photo-wrap"><img class="principal-photo" src="images/makan-brian.jpg" alt="Brian Makan" style="transform: scale(1.10); object-position: center 6%;"/></div>
+      <img class="principal-photo" src="images/makan-brian.jpg" alt="Brian Makan"/>
       <div class="principal-info">
         <div class="principal-name">Brian Makan, PE</div>
         <div class="principal-role">Principal</div>
@@ -196,7 +194,7 @@
     </div>
 
     <div class="principal-card">
-      <div class="principal-photo-wrap"><img class="principal-photo" src="images/sejba-matt.jpg" alt="Matt Sejba" style="transform: scale(0.92); object-position: center 10%;"/></div>
+      <img class="principal-photo" src="images/sejba-matt.jpg" alt="Matt Sejba"/>
       <div class="principal-info">
         <div class="principal-name">Matt Sejba, PE</div>
         <div class="principal-role">Principal</div>
@@ -215,92 +213,92 @@
   <div class="team-grid">
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/black-john.jpg" alt="John Black" style="transform: scale(0.92); object-position: center 12%;"/></div>
+      <img class="team-photo" src="images/black-john.jpg" alt="John Black"/>
       <div class="team-info"><div class="team-name">John Black</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/call-brian.jpg" alt="Brian Call" style="transform: scale(0.92); object-position: center 12%;"/></div>
+      <img class="team-photo" src="images/call-brian.jpg" alt="Brian Call"/>
       <div class="team-info"><div class="team-name">Brian Call, PE</div><div class="team-title">Electrical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/campbell-chris.jpg" alt="Chris Campbell" style="transform: scale(0.65); object-position: center 16%;"/></div>
+      <img class="team-photo" src="images/campbell-chris.jpg" alt="Chris Campbell"/>
       <div class="team-info"><div class="team-name">Chris Campbell, PE</div><div class="team-title">Sr. Associate, Electrical</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/farley-joe.jpg" alt="Joe Farley" style="transform: scale(0.70); object-position: center 14%;"/></div>
+      <img class="team-photo" src="images/farley-joe.jpg" alt="Joe Farley"/>
       <div class="team-info"><div class="team-name">Joe Farley, PE</div><div class="team-title">Sr. Associate, Mechanical</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/hernandez-david.jpg" alt="David Hernandez" style="transform: scale(1.0); object-position: center 10%;"/></div>
+      <img class="team-photo" src="images/hernandez-david.jpg" alt="David Hernandez"/>
       <div class="team-info"><div class="team-name">David Hernandez, PE</div><div class="team-title">Sr. Associate, Electrical</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/hewit-ryan.jpg" alt="Ryan Hewit" style="transform: scale(1.55); object-position: center 4%;"/></div>
+      <img class="team-photo" src="images/hewit-ryan.jpg" alt="Ryan Hewit"/>
       <div class="team-info"><div class="team-name">Ryan Hewit, PE</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/ibrahim-nasser.jpg" alt="Nasser Ibrahim" style="transform: scale(0.83); object-position: center 12%;"/></div>
+      <img class="team-photo" src="images/ibrahim-nasser.jpg" alt="Nasser Ibrahim"/>
       <div class="team-info"><div class="team-name">Nasser Ibrahim</div><div class="team-title">Electrical Designer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/musci-mike.jpg" alt="Mike Musci" style="transform: scale(0.70); object-position: center 14%;"/></div>
+      <img class="team-photo" src="images/musci-mike.jpg" alt="Mike Musci"/>
       <div class="team-info"><div class="team-name">Mike Musci, PE</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/murach-nathan.jpg" alt="Nathan Murach" style="transform: scale(1.70); object-position: center 3%;"/></div>
+      <img class="team-photo" src="images/murach-nathan.jpg" alt="Nathan Murach"/>
       <div class="team-info"><div class="team-name">Nathan Murach, EI</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/rath-brian.jpg" alt="Brian Rath" style="transform: scale(1.05); object-position: center 9%;"/></div>
+      <img class="team-photo" src="images/rath-brian.jpg" alt="Brian Rath"/>
       <div class="team-info"><div class="team-name">Brian Rath, EI</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/smith-kyle.jpg" alt="Kyle Smith" style="transform: scale(1.0); object-position: center 10%;"/></div>
+      <img class="team-photo" src="images/smith-kyle.jpg" alt="Kyle Smith"/>
       <div class="team-info"><div class="team-name">Kyle Smith, EI</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/soehnlen-mark.jpg" alt="Mark Soehnlen" style="transform: scale(1.55); object-position: center 4%;"/></div>
+      <img class="team-photo" src="images/soehnlen-mark.jpg" alt="Mark Soehnlen"/>
       <div class="team-info"><div class="team-name">Mark Soehnlen, EI</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/spray-adam.jpg" alt="Adam Spray" style="transform: scale(0.76); object-position: center 13%;"/></div>
+      <img class="team-photo" src="images/spray-adam.jpg" alt="Adam Spray"/>
       <div class="team-info"><div class="team-name">Adam Spray, PE</div><div class="team-title">Associate, Electrical</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/tosanovic-slavisa.jpg" alt="Slavisa Tosanovic" style="transform: scale(0.86); object-position: center 11%;"/></div>
+      <img class="team-photo" src="images/tosanovic-slavisa.jpg" alt="Slavisa Tosanovic"/>
       <div class="team-info"><div class="team-name">Slavisa Tosanovic, EI</div><div class="team-title">Electrical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/vargas-ken.jpg" alt="Ken Vargas" style="transform: scale(1.0); object-position: center 10%;"/></div>
+      <img class="team-photo" src="images/vargas-ken.jpg" alt="Ken Vargas"/>
       <div class="team-info"><div class="team-name">Ken Vargas</div><div class="team-title">Mechanical Designer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/weir-kristi.jpeg" alt="Kristi Weir" style="transform: scale(1.15); object-position: center 7%;"/></div>
+      <img class="team-photo" src="images/weir-kristi.jpeg" alt="Kristi Weir"/>
       <div class="team-info"><div class="team-name">Kristi Weir, EI</div><div class="team-title">Mechanical Engineer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/wick-bobby.jpg" alt="Bobby Wick" style="transform: scale(0.83); object-position: center 12%;"/></div>
+      <img class="team-photo" src="images/wick-bobby.jpg" alt="Bobby Wick"/>
       <div class="team-info"><div class="team-name">Bobby Wick</div><div class="team-title">Sr. Electrical Designer</div></div>
     </div>
 
     <div class="team-card">
-      <div class="team-photo-wrap"><img class="team-photo" src="images/briggs-craig.jpg" alt="Craig Briggs" style="transform: scale(0.60); object-position: center 18%;"/></div>
+      <img class="team-photo" src="images/briggs-craig.jpg" alt="Craig Briggs"/>
       <div class="team-info"><div class="team-name">Craig Briggs</div><div class="team-title">Sr. Associate, Mechanical</div></div>
     </div>
 

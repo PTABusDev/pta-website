@@ -83,7 +83,7 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    background-image: url('https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/f28b968a-da89-46f9-bb48-a624e329ff28/Mountain+Top_093109_edited.jpg?content-type=image%2Fjpeg');
+    background-image: url('images/Mountain+Top_093109_edited.webp');
     background-size: cover; background-position: center; filter: brightness(0.45);
   }
   .hero-content {
@@ -138,7 +138,7 @@
     display: flex; flex-direction: column; justify-content: center;
   }
   .split-right {
-    background-image: url('https://images.squarespace-cdn.com/content/69a72db965601e6247ca9e47/adbcf551-a6e8-49ed-b3da-10e342a73e43/Leahy_114330_edited.jpg');
+    background-image: url('images/Leahy_114330_edited.webp');
     background-size: cover; background-position: center;
   }
   .section-eyebrow {
@@ -209,17 +209,6 @@
     color: var(--white);
   }
 
-  /* PHOTO ROW */
-  .photo-row { display: grid; grid-template-columns: repeat(3, 1fr); height: 320px; }
-  .photo-placeholder {
-    background: var(--navy-mid);
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: center; gap: 12px;
-    font-family: 'Barlow Condensed', sans-serif; font-size: 12px;
-    font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-    color: rgba(232,160,32,0.5);
-  }
-
   /* FOOTER CTA */
   .footer-cta { background: var(--amber); padding: 80px 40px; }
   .footer-cta-inner {
@@ -271,8 +260,6 @@
     .section { padding: 48px 24px; }
     .grid-disciplines { grid-template-columns: repeat(2, 1fr); }
     .grid-sectors { grid-template-columns: repeat(2, 1fr); }
-    .photo-row { grid-template-columns: 1fr; height: auto; }
-    .photo-placeholder { height: 200px; }
     .footer-cta { padding: 48px 24px; }
     .footer-cta-inner { flex-direction: column; align-items: flex-start; }
     footer { padding: 40px 24px; }
@@ -290,7 +277,7 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering, Inc." />
+      <img src="images/$PTA-076_Logo_RGB_Gradient_3color_White.webp" alt="PTA Engineering, Inc." />
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
@@ -429,21 +416,7 @@
   </div>
 </section>
 
-<!-- PHOTO ROW -->
-<div class="photo-row">
-  <div class="photo-placeholder">
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="rgba(232,160,32,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="2"/><circle cx="16" cy="16" r="5"/><path d="M3 11l5-5h4"/></svg>
-    Project Photo
-  </div>
-  <div class="photo-placeholder">
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="rgba(232,160,32,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="2"/><circle cx="16" cy="16" r="5"/><path d="M3 11l5-5h4"/></svg>
-    Project Photo
-  </div>
-  <div class="photo-placeholder">
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="rgba(232,160,32,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="2"/><circle cx="16" cy="16" r="5"/><path d="M3 11l5-5h4"/></svg>
-    Project Photo
-  </div>
-</div>
+<!-- TODO: Re-add Project Photos section once real project photography is available. Removed for launch — was placeholder boxes only. -->
 
 <!-- FOOTER CTA -->
 <section class="footer-cta">
@@ -457,7 +430,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-left">
-      <img src="https://images.squarespace-cdn.com/content/v1/69a72db965601e6247ca9e47/02ce2ca9-998f-45cd-b878-4d7b25517fa1/%24PTA-076_Logo_RGB_Gradient_3color_White.png?format=1500w" alt="PTA Engineering, Inc." />
+      <img src="images/$PTA-076_Logo_RGB_Gradient_3color_White.webp" alt="PTA Engineering, Inc." />
       <p>275 Springside Drive, Suite 300<br>Akron, OH 44333</p>
     </div>
     <div class="footer-right">

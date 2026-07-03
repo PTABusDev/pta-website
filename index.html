@@ -84,7 +84,7 @@
   .hero-bg {
     position: absolute; inset: 0;
     background-image: url('images/Mountain+Top_093109_edited.webp');
-    background-size: cover; background-position: center; filter: brightness(0.45);
+    background-size: cover; background-position: center 70%; filter: brightness(0.45);
   }
   .hero-content {
     position: relative; z-index: 2;
@@ -251,7 +251,8 @@
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
-    .hero { padding: 80px 24px 0; }
+    .hero { padding: 100px 24px 40px; min-height: 100svh; }
+    .hero h1 { font-size: clamp(56px, 14vw, 120px); }
     .hero-content { flex-direction: column; align-items: flex-start; }
     .hero-right { width: 100%; }
     .split-inner { grid-template-columns: 1fr; grid-template-rows: 260px auto; }
@@ -313,7 +314,7 @@
         <div class="stat-label">Years</div>
       </div>
       <div class="hero-stat">
-        <div class="stat-num">30+</div>
+        <div class="stat-num">25</div>
         <div class="stat-label">Engineers</div>
       </div>
       <div class="hero-stat">
@@ -337,7 +338,7 @@
     <div class="split-left">
       <div class="section-eyebrow">Who We Are</div>
       <h2>One Trusted<br>Team</h2>
-      <p>For over 73 years, PTA Engineering has delivered mechanical, electrical, and plumbing solutions that are biddable, buildable, and built to last. We don't just design systems — we become part of your team.</p>
+      <p>Since 1953, PTA Engineering has delivered mechanical, electrical, and plumbing solutions that are biddable, buildable, and built to last. We don't just design systems — we become part of your team.</p>
       <a href="about.html" class="hero-btn" style="align-self:flex-start;">Learn More</a>
     </div>
     <div class="split-right"></div>
@@ -421,7 +422,7 @@
 <!-- FOOTER CTA -->
 <section class="footer-cta">
   <div class="footer-cta-inner">
-    <h2>Let Us Work<br>Together</h2>
+    <h2>Let's Work<br>Together</h2>
     <a href="contact.html" class="cta-btn">Contact Us</a>
   </div>
 </section>

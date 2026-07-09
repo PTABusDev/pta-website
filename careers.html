@@ -88,7 +88,23 @@
     .why-card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 22px; letter-spacing: 0.04em; color: var(--white); margin-bottom: 14px; }
     .why-card p { font-size: 15px; color: var(--muted); line-height: 1.7; }
 
-    /* EEO */
+    /* GALLERY */
+    .gallery-section { background: var(--navy-mid); padding: 80px 40px; }
+    .gallery-section .section-heading { margin-bottom: 48px; }
+    .gallery-wrapper { position: relative; }
+    .gallery-track { display: flex; gap: 4px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; }
+    .gallery-track::-webkit-scrollbar { display: none; }
+    .gallery-track.dragging { cursor: grabbing; scroll-behavior: auto; }
+    .gallery-photo { height: 420px; width: auto; object-fit: cover; display: block; flex-shrink: 0; }
+    .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); background: var(--amber); border: none; color: var(--navy); width: 48px; height: 48px; font-size: 20px; font-weight: 700; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .gallery-btn:hover { background: var(--white); }
+    .gallery-btn-left { left: -24px; }
+    .gallery-btn-right { right: -24px; }
+    @media (max-width: 768px) {
+      .gallery-section { padding: 60px 24px; }
+      .gallery-photo { height: 280px; }
+      .gallery-btn { display: none; }
+    }
     .eeo-section { background: var(--navy-light); }
     .eeo-inner { max-width: var(--max-w); margin: 0 auto; }
     .eeo-box { border: 1px solid rgba(232,160,32,0.3); padding: 40px; }
@@ -214,6 +230,28 @@
   </div>
 </section>
 
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="section-inner">
+    <h2 class="section-heading">Life at <span>PTA</span></h2>
+    <div class="gallery-wrapper">
+      <button class="gallery-btn gallery-btn-left" onclick="scrollGallery(-1)">&#8592;</button>
+      <div class="gallery-track" id="galleryTrack">
+        <img class="gallery-photo" src="images/gallery-01.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-02.jpg" alt="PTA team" loading="lazy" style="object-position: center 20%;"/>
+        <img class="gallery-photo" src="images/gallery-03.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-04.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-05.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-06.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-07.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-08.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-09.jpg" alt="PTA team" loading="lazy"/>
+      </div>
+      <button class="gallery-btn gallery-btn-right" onclick="scrollGallery(1)">&#8594;</button>
+    </div>
+  </div>
+</section>
+
 <!-- EEO -->
 <section class="eeo-section">
   <div class="eeo-inner">
@@ -258,6 +296,72 @@
       drawer.classList.remove('open'); btn.classList.remove('open');
     }
   });
+
+  window.addEventListener('load', function() {});
+  window.addEventListener('resize', function() {});
+
+  function scrollGallery(dir) {
+    var track = document.getElementById('galleryTrack');
+    track.scrollBy({ left: dir * 500, behavior: 'smooth' });
+  }
+
+  // Seamless loop - duplicate photos
+  var track = document.getElementById('galleryTrack');
+  var imgs = Array.from(track.querySelectorAll('img'));
+  imgs.forEach(function(img) {
+    var clone = img.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  var isPaused = false;
+  var autoScroll;
+
+  function startAutoScroll() {
+    autoScroll = setInterval(function() {
+      if (!isPaused) {
+        track.scrollLeft += 1;
+        if (track.scrollLeft >= track.scrollWidth / 2) {
+          track.scrollLeft = 0;
+        }
+      }
+    }, 20);
+  }
+
+  track.addEventListener('mouseenter', function() { isPaused = true; });
+  track.addEventListener('mouseleave', function() { isPaused = false; });
+
+  var isDown = false;
+  var startX, scrollLeft;
+  track.addEventListener('mousedown', function(e) {
+    isDown = true; isPaused = true;
+    track.classList.add('dragging');
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+  track.addEventListener('mouseup', function() { isDown = false; track.classList.remove('dragging'); setTimeout(function() { isPaused = false; }, 2000); });
+  track.addEventListener('mousemove', function(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    var x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+
+  // Touch support for mobile
+  var touchStartX, touchScrollLeft;
+  track.addEventListener('touchstart', function(e) {
+    isPaused = true;
+    touchStartX = e.touches[0].pageX - track.offsetLeft;
+    touchScrollLeft = track.scrollLeft;
+  }, { passive: true });
+  track.addEventListener('touchend', function() {
+    setTimeout(function() { isPaused = false; }, 2000);
+  });
+  track.addEventListener('touchmove', function(e) {
+    var x = e.touches[0].pageX - track.offsetLeft;
+    track.scrollLeft = touchScrollLeft - (x - touchStartX) * 1.5;
+  }, { passive: true });
+
+  window.addEventListener('load', startAutoScroll);
 </script>
 </body>
 </html>

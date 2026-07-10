@@ -96,14 +96,9 @@
     .gallery-track::-webkit-scrollbar { display: none; }
     .gallery-track.dragging { cursor: grabbing; scroll-behavior: auto; }
     .gallery-photo { height: 420px; width: auto; object-fit: cover; display: block; flex-shrink: 0; }
-    .gallery-btn { position: absolute; top: 50%; transform: translateY(-50%); background: var(--amber); border: none; color: var(--navy); width: 48px; height: 48px; font-size: 20px; font-weight: 700; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
-    .gallery-btn:hover { background: var(--white); }
-    .gallery-btn-left { left: -24px; }
-    .gallery-btn-right { right: -24px; }
     @media (max-width: 768px) {
       .gallery-section { padding: 60px 24px; }
       .gallery-photo { height: 280px; }
-      .gallery-btn { display: none; }
     }
     .eeo-section { background: var(--navy-light); }
     .eeo-inner { max-width: var(--max-w); margin: 0 auto; }
@@ -235,7 +230,6 @@
   <div class="section-inner">
     <h2 class="section-heading">Life at <span>PTA</span></h2>
     <div class="gallery-wrapper">
-      <button class="gallery-btn gallery-btn-left" onclick="scrollGallery(-1)">&#8592;</button>
       <div class="gallery-track" id="galleryTrack">
         <img class="gallery-photo" src="images/gallery-01.jpg" alt="PTA team" loading="lazy"/>
         <img class="gallery-photo" src="images/gallery-02.jpg" alt="PTA team" loading="lazy" style="object-position: center 20%;"/>
@@ -247,7 +241,6 @@
         <img class="gallery-photo" src="images/gallery-08.jpg" alt="PTA team" loading="lazy"/>
         <img class="gallery-photo" src="images/gallery-09.jpg" alt="PTA team" loading="lazy"/>
       </div>
-      <button class="gallery-btn gallery-btn-right" onclick="scrollGallery(1)">&#8594;</button>
     </div>
   </div>
 </section>
@@ -300,11 +293,6 @@
   window.addEventListener('load', function() {});
   window.addEventListener('resize', function() {});
 
-  function scrollGallery(dir) {
-    var track = document.getElementById('galleryTrack');
-    track.scrollBy({ left: dir * 500, behavior: 'smooth' });
-  }
-
   // Seamless loop - duplicate photos
   var track = document.getElementById('galleryTrack');
   var imgs = Array.from(track.querySelectorAll('img'));
@@ -317,14 +305,16 @@
   var autoScroll;
 
   function startAutoScroll() {
-    autoScroll = setInterval(function() {
+    function step() {
       if (!isPaused) {
-        track.scrollLeft += 1;
+        track.scrollLeft += 0.5;
         if (track.scrollLeft >= track.scrollWidth / 2) {
           track.scrollLeft = 0;
         }
       }
-    }, 20);
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   }
 
   track.addEventListener('mouseenter', function() { isPaused = true; });

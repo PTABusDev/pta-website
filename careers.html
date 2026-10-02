@@ -92,7 +92,7 @@
     .gallery-section { background: var(--navy-mid); padding: 80px 40px; }
     .gallery-section .section-heading { margin-bottom: 48px; }
     .gallery-wrapper { position: relative; }
-    .gallery-track { display: flex; gap: 4px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; }
+    .gallery-track { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; cursor: grab; }
     .gallery-track::-webkit-scrollbar { display: none; }
     .gallery-track.dragging { cursor: grabbing; scroll-behavior: auto; }
     .gallery-photo { height: 420px; width: auto; object-fit: cover; display: block; flex-shrink: 0; }
@@ -231,15 +231,17 @@
     <h2 class="section-heading">Life at <span>PTA</span></h2>
     <div class="gallery-wrapper">
       <div class="gallery-track" id="galleryTrack">
-        <img class="gallery-photo" src="images/gallery-01.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-02.jpg" alt="PTA team" loading="lazy" style="object-position: center 20%;"/>
-        <img class="gallery-photo" src="images/gallery-03.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-04.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-05.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-06.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-07.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-08.jpg" alt="PTA team" loading="lazy"/>
-        <img class="gallery-photo" src="images/gallery-09.jpg" alt="PTA team" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-01.jpg" alt="One team at our 2026 PTA annual golf outing" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-02.jpg" alt="PTA staff at the University of Akron career fair" loading="lazy" style="object-position: center 20%;"/>
+        <img class="gallery-photo" src="images/gallery-03.jpg" alt="PTA team building event at the Akron Escape Room" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-04.jpg" alt="2026 cornhole tournament champions" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-05.jpg" alt="2026 Office Winter Olympics tabletop curling event" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-06.jpg" alt="PTA 70th anniversary cookies" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-07.jpg" alt="PTA staff at office lunch" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-08.jpg" alt="PE license celebration cake for our newest PE" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-09.jpg" alt="PTA staff at ACE bowling fundraiser event" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-10.jpg" alt="PTA staff enjoying the Ice Cream Social event" loading="lazy"/>
+        <img class="gallery-photo" src="images/gallery-11.jpg" alt="PTA staff on the putting green at the 2026 annual golf outing" loading="lazy"/>
       </div>
     </div>
   </div>
@@ -296,20 +298,33 @@
   // Seamless loop - duplicate photos
   var track = document.getElementById('galleryTrack');
   var imgs = Array.from(track.querySelectorAll('img'));
+  var setCount = imgs.length;
   imgs.forEach(function(img) {
     var clone = img.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
     track.appendChild(clone);
   });
 
   var isPaused = false;
-  var autoScroll;
+
+  /* Width of one full set of photos. Measured live rather than cached so it
+     stays correct as lazy images load in and when the window is resized. */
+  function loopWidth() {
+    var first = track.children[0];
+    var firstClone = track.children[setCount];
+    if (!first || !firstClone) return 0;
+    return firstClone.offsetLeft - first.offsetLeft;
+  }
 
   function startAutoScroll() {
     function step() {
       if (!isPaused) {
+        var w = loopWidth();
         track.scrollLeft += 0.5;
-        if (track.scrollLeft >= track.scrollWidth / 2) {
-          track.scrollLeft = 0;
+        /* Subtract one set rather than snapping to 0: the photo under the
+           cursor is identical either side, so the wrap is invisible. */
+        if (w > 0 && track.scrollLeft >= w) {
+          track.scrollLeft -= w;
         }
       }
       requestAnimationFrame(step);

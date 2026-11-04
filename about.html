@@ -7,11 +7,11 @@
   <meta name="description" content="Since 1953, PTA Engineering has delivered trusted MEP solutions nationwide. Learn about our firm, our core values, and what makes us different.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="images/pta-favicon.png">
-  <link rel="canonical" href="https://ptaengineering.com/about.html">
+  <link rel="canonical" href="https://ptaengineering.com/about">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ptaengineering.com/about.html">
+  <meta property="og:url" content="https://ptaengineering.com/about">
   <meta property="og:title" content="About PTA Engineering – 73 Years of MEP Excellence">
   <meta property="og:description" content="Since 1953, PTA Engineering has delivered trusted mechanical, electrical, and plumbing solutions for healthcare, data centers, education, and more.">
   <meta property="og:image" content="https://ptaengineering.com/images/hero-bg.jpg">
@@ -53,7 +53,7 @@
     .nav-drawer a:hover, .nav-drawer a.active { color: var(--amber); }
 
     /* PAGE HERO */
-    .page-hero { margin-top: 80px; padding: 80px 40px; background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 60%, #1e3a56 100%); }
+    .page-hero { margin-top: 80px; padding: 80px 40px; background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 60%, #1e3a56 100%); border-bottom: 6px solid var(--amber); }
     .page-hero-inner { max-width: var(--max-w); margin: 0 auto; }
     .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
     .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(48px, 7vw, 88px); line-height: 1; color: var(--white); margin-bottom: 24px; }
@@ -140,6 +140,41 @@
       .page-hero h1 { font-size: 42px; }
       .stats-grid { grid-template-columns: 1fr; }
     }
+    /* HISTORY TIMELINE */
+    .history-section { background: var(--navy-mid); padding: 80px 40px; }
+    .history-heading { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(32px, 4vw, 52px); color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .history-heading span { color: var(--amber); }
+    .history-subhead { font-size: 16px; color: var(--muted); margin-bottom: 64px; }
+    .timeline { position: relative; max-width: var(--max-w); margin: 0 auto; }
+    .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: var(--amber); transform: translateX(-50%); }
+    .tl-entry { display: grid; grid-template-columns: minmax(0,1fr) 3px minmax(0,1fr); position: relative; margin-bottom: 2px; }
+    .tl-dot { position: absolute; left: 50%; top: 28px; width: 16px; height: 16px; background: var(--amber); border-radius: 50%; border: 3px solid var(--navy-mid); transform: translateX(-50%); z-index: 2; }
+    .tl-left { padding: 32px 48px 32px 0; text-align: right; min-width: 0; }
+    .tl-right { padding: 32px 0 32px 48px; min-width: 0; }
+    .tl-line { background: transparent; }
+    .tl-era { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 6px; }
+    .tl-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(22px, 3vw, 32px); text-transform: uppercase; color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .tl-subtitle { font-size: 13px; color: var(--amber); font-style: italic; margin-bottom: 16px; }
+    .tl-text { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; overflow-wrap: break-word; }
+    .tl-photo-strip { display: flex; gap: 6px; overflow-x: scroll; scrollbar-width: thin; scrollbar-color: var(--amber) var(--navy); margin-top: 4px; padding-bottom: 6px; width: 100%; }
+    .tl-photo-strip::-webkit-scrollbar { height: 4px; }
+    .tl-photo-strip::-webkit-scrollbar-track { background: var(--navy); }
+    .tl-photo-strip::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 2px; }
+    .tl-photo-strip img { height: 200px; width: auto; object-fit: cover; display: block; flex-shrink: 0; border: 1px solid rgba(232,160,32,0.2); max-width: none; }
+    .tl-legacy { border-left: 3px solid var(--amber); padding: 16px 20px; background: rgba(232,160,32,0.06); }
+    .tl-left .tl-legacy { border-left: none; border-right: 3px solid var(--amber); text-align: right; }
+    .tl-legacy-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 6px; }
+    .tl-legacy p { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    @media (max-width: 768px) {
+      .history-section { padding: 60px 24px; }
+      .timeline::before { left: 16px; }
+      .tl-entry { display: block; padding-left: 40px; position: relative; }
+      .tl-dot { left: 16px; top: 24px; }
+      .tl-left { display: none; }
+      .tl-line { display: none; }
+      .tl-right { padding: 20px 0; }
+      .tl-photo-strip img { height: 160px; }
+    }
   </style>
 </head>
 <body>
@@ -193,7 +228,7 @@
         </div>
       </div>
       <div class="firm-split-image">
-        <img src="images/Joann_9553.jpg" alt="PTA Engineering team at work" />
+        <img src="images/joann-9553.jpg" alt="Rooftop chiller and condenser array designed by PTA Engineering" />
       </div>
     </div>
   </div>
@@ -249,6 +284,118 @@
         <blockquote><p>"If you would attain to what you are not yet, you must always be displeased by what you are. For where you are pleased with yourself, there you have remained. Keep adding, keep walking, keep advancing."</p><cite>– Saint Augustine of Hippo</cite></blockquote>
         <p>PTA teammates embrace change, seek overall growth, and actively support the growth of the people around them. The firm grows because our people grow.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY TIMELINE -->
+<section class="history-section">
+  <div class="section-inner">
+    <h2 class="history-heading">Our <span>History</span></h2>
+    <p class="history-subhead">73 years of trusted engineering</p>
+    <div class="timeline">
+
+      <!-- ERA 1 -->
+      <div class="tl-entry">
+        <div class="tl-dot"></div>
+        <div class="tl-left">
+          <div class="tl-era">1953–1974</div>
+          <div class="tl-title">The Foundation</div>
+          <div class="tl-subtitle">"Built on Clear Thinking &amp; Practical Solutions"</div>
+          <p class="tl-text">In 1953, Kent Kucheman, a University of Akron electrical engineering graduate and WWII Army medic, partnered with Harold Howard to launch Howard and Kucheman Engineering. Both founders began their careers as electrical estimators for local contractors, where they learned a lesson that became PTA's foundation: thoughtful, clear, and well-organized design and bid documents win the trust of clients and contractors. After Howard's unexpected passing in 1957, Joe Varvaro stepped in.</p>
+          <p class="tl-text">In 1973, Kucheman and Varvaro purchased a century-old home at 481 N. Cleveland-Massillon Road and converted it into office space, moving from their Western Avenue location. That building became the heart of the firm's identity and a symbol of their commitment to Akron. By 1974, the firm had grown from two people to five, establishing the footprint and discipline that has defined PTA for seven decades.</p>
+          <div class="tl-photo-strip">
+            <img src="images/history-1a.jpg" alt="Pencil rendering of Kent Kucheman" loading="lazy"/>
+            <img src="images/history-1b.jpg" alt="Pencil rendering of Joe Varvaro" loading="lazy"/>
+            <img src="images/history-1c.jpg" alt="Ohio Professional Engineer registration seal for Kent Kucheman, license 20568, and Joseph Varvaro, license 21120" loading="lazy"/>
+            <img src="images/history-1d.jpg" alt="Pencil rendering of PTA's first office on Western Avenue" loading="lazy"/>
+            <img src="images/history-1e.jpg" alt="The century-old home at 481 N. Cleveland-Massillon Road, converted to PTA's office in 1973" loading="lazy"/>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-right">
+          <div class="tl-legacy">
+            <div class="tl-legacy-label">Legacy</div>
+            <p>A thoughtful design philosophy centered on clarity, and a home that became the firm's identity.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA 2 -->
+      <div class="tl-entry">
+        <div class="tl-dot"></div>
+        <div class="tl-left">
+          <div class="tl-legacy">
+            <div class="tl-legacy-label">Legacy</div>
+            <p>A full-service MEP firm with deep expertise, a growing national portfolio, and a platform built for continued growth.</p>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-right">
+          <div class="tl-era">1975–2015</div>
+          <div class="tl-title">The Expansion</div>
+          <div class="tl-subtitle">"Specialization, Growth &amp; Professional Leadership"</div>
+          <p class="tl-text">Jim Peters, another University of Akron graduate, joined the team in 1975. In 1981, the firm became Kucheman, Varvaro &amp; Peters. That same year, Dave Tschantz brought his experience in design and construction from Goodyear's corporate engineering department to the growing firm. Joe Varvaro retired in 1984, and in 1986, the firm became Kucheman, Peters &amp; Tschantz, Inc. When Kent Kucheman retired in 1987, he left behind a legacy of disciplined design. In 1996, Peters and Tschantz established The Kucheman and Varvaro Scholarship in Electrical Engineering to honor the firm's founders and ensure their values would shape the next generation of engineers. The firm keeps a close relationship with The University of Akron and other universities, mentoring engineering students year-round as one way to grow organically with young talented staff.</p>
+          <p class="tl-text">The firm made a pivotal strategic decision by adding mechanical engineering to become a full-service MEP firm in January 2000. Pat Klanac joined in 2002 to manage the growth of the mechanical engineering services. With continued growth, the firm moved in 2005 to a larger space, its current home, Suite 300 at 275 Springside Drive. In 2007, the firm became Peters, Tschantz &amp; Associates, Inc., and Klanac, Mike Casseday, and Brian Holloway were formally introduced as associates. Dave Tschantz and Jim Peters retired at the end of 2015 and beginning of 2016 respectively.</p>
+          <div class="tl-photo-strip">
+            <img src="images/history-2a.jpg" alt="Portrait of Jim Peters" loading="lazy"/>
+            <img src="images/history-2b.jpg" alt="Portrait of Dave Tschantz" loading="lazy"/>
+            <img src="images/history-2c.jpg" alt="The 275 Springside Corporate Exchange building in Akron, PTA's office since 2005" loading="lazy"/>
+            <img src="images/history-2d.jpg" alt="Peters, Tschantz &amp; Associates, Inc. Consulting Engineers logo" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA 3 -->
+      <div class="tl-entry">
+        <div class="tl-dot"></div>
+        <div class="tl-left">
+          <div class="tl-era">2016–2023</div>
+          <div class="tl-title">The Rebrand</div>
+          <div class="tl-subtitle">"Engineering Buildings to Live"</div>
+          <p class="tl-text">In early 2016, Pat Klanac and Mike Casseday took ownership and the firm rebranded as PTA Engineering, Inc., a name that honored its past and signaled its evolution. They translated the founders' engineering practice into a modern philosophy that guided every project and relationship. During this era, PTA formalized its Core Values: Diligent, Professionally Affable, Accountable, and Growth-Oriented. Committed to servant leadership, the owners identified the next group of associates to carry forward the firm's mission. PTA expanded its national work to serve multiple Fortune 100 companies across the commercial, mission critical, and industrial markets.</p>
+          <p class="tl-text">In 2023, PTA celebrated seven decades of serving clients in Northeast Ohio and across the country with a special 70th anniversary recognition.</p>
+          <div class="tl-photo-strip">
+            <img src="images/history-3a.jpg" alt="Portrait of Mike Casseday" loading="lazy"/>
+            <img src="images/history-3b.jpg" alt="Portrait of Pat Klanac" loading="lazy"/>
+            <img src="images/history-3c.jpg" alt="Two PTA principals and five associates in the firm's conference room" loading="lazy"/>
+            <img src="images/history-3d.jpg" alt="The pta engineering logo introduced in the 2016 rebrand" loading="lazy"/>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-right">
+          <div class="tl-legacy">
+            <div class="tl-legacy-label">Legacy</div>
+            <p>A rebranded firm with a clear identity, defined core values, and 70 years of engineering excellence to build upon.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA 4 -->
+      <div class="tl-entry">
+        <div class="tl-dot"></div>
+        <div class="tl-left">
+          <div class="tl-legacy">
+            <div class="tl-legacy-label">Legacy</div>
+            <p>A firm positioned as trusted advisors, investing in people, culture, and relationships for the next 70 years.</p>
+          </div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="tl-right">
+          <div class="tl-era">2024–Present</div>
+          <div class="tl-title">Building the Future</div>
+          <div class="tl-subtitle">"Trusted Advisors"</div>
+          <p class="tl-text">At the end of 2023, Mike Casseday retired after decades of practicing engineering, marking a milestone transition. At the start of 2024, Jeff Cerveny, Matt Sejba, Jon Jennings, and Brian Makan became partners alongside Pat Klanac, five principals united by the same philosophy that has defined PTA since 1953. In 2025, the firm completed a modernization of its Springside Drive office, investing in the workspace to reflect the culture, professionalism, and collaboration PTA brings to every project.</p>
+          <p class="tl-text">Today, PTA is deepening its healthcare expertise, strengthening long-standing client relationships, and building a culture where every engineer is developed in alignment with the firm's mission. Project success is at the heart of all we do. PTA achieves solutions that work functionally and economically to ultimately become trusted advisors for our clients.</p>
+          <div class="tl-photo-strip">
+            <img src="images/history-4a.jpg" alt="Announcement of PTA’s four new principals: Jeff Cerveny PE and Matt Sejba PE, Principal Mechanical Engineers, and Jon Jennings PE and Brian Makan PE, Principal Electrical Engineers" loading="lazy"/>
+            <img src="images/history-4b.jpg" alt="Five PTA principals, three senior associates, and two associates in the newly renovated conference room" loading="lazy"/>
+            <img src="images/history-4c.jpg" alt="The pta engineering est. 1953 logo" loading="lazy"/>
+            <img src="images/history-4d.jpg" alt="Ribbon cutting for PTA's newly renovated Springside Drive office in 2025" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

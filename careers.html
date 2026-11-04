@@ -7,11 +7,11 @@
   <meta name="description" content="Build your engineering career at PTA. Competitive wages, great benefits, progressive schedule, and a culture built on growth. Based in Akron, OH.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/png" href="images/pta-favicon.png">
-  <link rel="canonical" href="https://ptaengineering.com/careers.html">
+  <link rel="canonical" href="https://ptaengineering.com/careers">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ptaengineering.com/careers.html">
+  <meta property="og:url" content="https://ptaengineering.com/careers">
   <meta property="og:title" content="Careers at PTA Engineering">
   <meta property="og:description" content="Build your engineering career at PTA. Competitive wages, great benefits, progressive Mon–Fri schedule, and a culture built on growth. Akron, OH.">
   <meta property="og:image" content="https://ptaengineering.com/images/hero-bg.jpg">
@@ -53,7 +53,7 @@
     .nav-drawer a:hover, .nav-drawer a.active { color: var(--amber); }
 
     /* PAGE HERO */
-    .page-hero { margin-top: 80px; padding: 80px 40px; background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 60%, #1e3a56 100%); border-bottom: 6px solid var(--amber); }
+    .page-hero { margin-top: 80px; padding: 80px 40px; background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 60%, #1e3a56 100%); }
     .page-hero-inner { max-width: var(--max-w); margin: 0 auto; }
     .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; }
     .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(48px, 7vw, 88px); line-height: 1; color: var(--white); margin-bottom: 24px; }
@@ -98,7 +98,7 @@
     .gallery-photo { height: 420px; width: auto; object-fit: cover; display: block; flex-shrink: 0; }
     @media (max-width: 768px) {
       .gallery-section { padding: 60px 24px; }
-      .gallery-photo { height: 280px; }
+      .gallery-photo { height: min(280px, calc((100vw - 48px) / 1.51)); }
     }
     .eeo-section { background: var(--navy-light); }
     .eeo-inner { max-width: var(--max-w); margin: 0 auto; }

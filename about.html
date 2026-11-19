@@ -168,11 +168,12 @@
     @media (max-width: 768px) {
       .history-section { padding: 60px 24px; }
       .timeline::before { left: 16px; }
-      .tl-entry { display: block; padding-left: 40px; position: relative; }
+      .tl-entry { display: flex; flex-direction: column; padding-left: 40px; padding-bottom: 24px; position: relative; }
       .tl-dot { left: 16px; top: 24px; }
-      .tl-left { display: none; }
       .tl-line { display: none; }
-      .tl-right { padding: 20px 0; }
+      .tl-left, .tl-right { padding: 20px 0 0; text-align: left; }
+      .tl-entry:nth-child(even) .tl-left { order: 2; }
+      .tl-left .tl-legacy { border-right: none; border-left: 3px solid var(--amber); text-align: left; }
       .tl-photo-strip img { height: 160px; }
     }
   </style>
